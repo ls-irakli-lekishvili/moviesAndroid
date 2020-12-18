@@ -27,7 +27,7 @@ class LandingPageFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val movies = getMovies()
+        getMovies()
     }
 
     private fun getMovies(){

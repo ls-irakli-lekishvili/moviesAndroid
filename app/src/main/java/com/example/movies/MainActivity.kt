@@ -2,15 +2,8 @@ package com.example.movies
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Toast
-import com.example.movies.MainActivity.RetrofitBuilder.retrofit
 import com.example.movies.landingPage.LandingPageFragment
-import com.example.movies.models.Movie
-
-
 import okhttp3.OkHttpClient
-import retrofit2.Callback
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
