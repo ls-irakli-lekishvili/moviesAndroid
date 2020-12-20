@@ -18,7 +18,6 @@ class MainActivity : AppCompatActivity() {
         fragmentTransaction.add(R.id.main_container, fragment)
         fragmentTransaction.commit()
 
-
     }
 
     object RetrofitBuilder {

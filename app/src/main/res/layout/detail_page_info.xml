@@ -1,12 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/purple_200">
-    <TextView
+    android:orientation="horizontal"
+    android:background="@color/gray">
+
+    <ImageView
+        android:id="@+id/movie_image_big"
         android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/movie_image"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+    <TextView
+        android:id="@+id/card_background"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:scaleType="fitXY"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_image_big"
+        android:background="@drawable/card_background"
+        android:contentDescription="@string/background"
+        android:layout_margin="20dp"
+        />
+
+    <TextView
+        android:id="@+id/original_title"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="watup"/>
+        android:text="@string/original_title"
+        app:layout_constraintStart_toStartOf="@+id/card_background"
+        app:layout_constraintTop_toTopOf="@+id/card_background"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/release_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/release_date"
+        app:layout_constraintStart_toStartOf="@+id/card_background"
+        app:layout_constraintTop_toBottomOf="@+id/original_title"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/language"
+        app:layout_constraintStart_toStartOf="@+id/card_background"
+        app:layout_constraintTop_toBottomOf="@+id/release_date"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/season"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seasons"
+        app:layout_constraintStart_toStartOf="@+id/card_background"
+        app:layout_constraintTop_toBottomOf="@+id/language"
+        android:layout_margin="10dp"
+        />
+
+    <TextView
+        android:id="@+id/original_title_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        app:layout_constraintEnd_toEndOf="@+id/card_background"
+        app:layout_constraintTop_toTopOf="@+id/card_background"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/release_date_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        app:layout_constraintEnd_toEndOf="@+id/card_background"
+        app:layout_constraintTop_toBottomOf="@+id/original_title_result"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/language_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        app:layout_constraintEnd_toEndOf="@+id/card_background"
+        app:layout_constraintTop_toBottomOf="@+id/release_date_result"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/season_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textview"
+        app:layout_constraintEnd_toEndOf="@+id/card_background"
+        app:layout_constraintTop_toBottomOf="@+id/language_result"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        />
 
 
-</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,7 +1,6 @@
 package com.example.movies.landingPage
 
 import android.content.Context
-import android.content.Intent
 import android.content.res.Resources
 import android.graphics.Color
 import android.os.Bundle
@@ -54,7 +53,7 @@ class MovieListViewHolder(itemView: View, private val context: Context) :
     private fun setClickEvent(movieInfo: Movie) {
         movieImage.setOnClickListener {
             val bundle = Bundle().apply {
-                putParcelable("movieData", movieInfo)
+                putInt("movieId", movieInfo.id)
             }
             val fragment = DetailPageFragment()
             fragment.arguments = bundle
